@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoLoader v2 Quick Start Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .guide-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* Print-specific styles to preserve formatting */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact; /* Chrome, Safari */
+                print-color-adjust: exact; /* Firefox, Edge */
+            }
+            .guide-container {
+                max-width: 100%;
+                box-shadow: none;
+                border: none;
+            }
+            section, .bg-white, .bg-blue-50 {
+                break-inside: avoid; /* Prevents sections from splitting across pages */
+            }
+            header, footer {
+                break-before: avoid;
+                break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="guide-container p-4 sm:p-8">
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900">AutoLoader v2</h1>
+            <p class="text-lg text-gray-600 mt-2">Quick Start Guide</p>
+        </header>
+
+        <!-- Introduction -->
+        <section class="mb-12">
+            <p class="text-base leading-relaxed bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                The AutoLoader is an attachment for the Drywise inline filament dryer, designed to automate filament loading and continuously feed new material from the spool to your printer. This eliminates resistance from the spool, especially with heavier spools (2kg+), preventing print artifacts and underextrusions.
+            </p>
+        </section>
+
+        <!-- What's in the Box -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 border-b pb-2 text-gray-900">What's in the Box?</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item: Input Part -->
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center">
+                    <img src="https://i.postimg.cc/z3N4T6m7/edited-DSC04334.jpg" alt="Input Part" class="w-full h-32 object-cover rounded-md mb-3" onerror="this.onerror=null;this.src='https://placehold.co/300x200/e2e8f0/334155?text=Input+Part';">
+                    <h3 class="font-semibold text-gray-700">Input Part</h3>
+                </div>
+                <!-- Item: Output Part -->
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center">
+                    <img src="https://i.postimg.cc/jw0mgkDs/edited-DSC04292.jpg" alt="Output Part" class="w-full h-32 object-cover rounded-md mb-3" onerror="this.onerror=null;this.src='https://placehold.co/300x200/e2e8f0/334155?text=Output+Part';">
+                    <h3 class="font-semibold text-gray-700">Output Part</h3>
+                </div>
+                <!-- Item: Controller -->
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center">
+                    <img src="https://i.postimg.cc/303674jV/edited-DSC04382.jpg" alt="Controller" class="w-full h-32 object-cover rounded-md mb-3" onerror="this.onerror=null;this.src='https://placehold.co/300x200/e2e8f0/334155?text=Controller';">
+                    <h3 class="font-semibold text-gray-700">Controller</h3>
+                </div>
+                <!-- Item: Pin/Dowel & Screws -->
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center">
+                    <img src="https://i.postimg.cc/DJrDtdG1/edited-DSC04298.jpg" alt="Pin & Screws" class="w-full h-32 object-cover rounded-md mb-3" onerror="this.onerror=null;this.src='https://placehold.co/300x200/e2e8f0/334155?text=Pin+%26+Screws';">
+                    <h3 class="font-semibold text-gray-700">Pin/Dowel & Screws</h3>
+                </div>
+                <!-- Item: PTFE Tubing -->
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center sm:col-span-2 lg:col-span-1">
+                    <img src="https://www.parker.com/content/dam/Parker-com/Online/Product-Images/Parflex-Division/zoom_1000x1000/tubing_TX-tfe-blk-_zm.jpg" alt="PTFE Tubing" class="w-full h-32 object-cover rounded-md mb-3" onerror="this.onerror=null;this.src='https://placehold.co/300x200/e2e8f0/334155?text=PTFE+Tubing';">
+                    <h3 class="font-semibold text-gray-700">PTFE Tubing</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Setup Instructions -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 border-b pb-2 text-gray-900">Setup Instructions</h2>
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-2/3">
+                    <ol class="list-decimal list-inside space-y-4 text-base bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                        <li>Remove the input port cover or pre-heater from the Drywise.</li>
+                        <li>Connect the AutoLoader's **input part**.</li>
+                        <li>Remove the output port cover from the Drywise and store the original pin.</li>
+                        <li>Install the AutoLoader's **output part** using the longer dowel/pin provided.</li>
+                        <li>Using the provided screws, attach the **controller** to the front top of the Drywise.</li>
+                        <li>Connect the cables from the ports to the controller.</li>
+                        <li>Measure and cut the PTFE tubing to the required lengths (Drywise output to extruder, and Drywise input to spool).</li>
+                        <li>Securely connect the PTFE tubes.</li>
+                    </ol>
+                </div>
+                <div class="lg:w-1/3">
+                    <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-4 rounded-r-lg h-full">
+                        <h4 class="font-bold mb-2">Setup Tips</h4>
+                        <ul class="list-disc list-inside space-y-2 text-sm">
+                            <li>The output PTFE tube is crucial for the buffer switch to function.</li>
+                            <li>Ensure tubes are pushed in fully.</li>
+                            <li>Keep the path from the Drywise output to the printer as short as possible.</li>
+                            <li>Ensure ports are not obstructed.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Controller & Usage -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 border-b pb-2 text-gray-900">Controller & Usage</h2>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <p class="mb-6 text-center">Press and hold a button to activate its function.</p>
+                <div class="flex flex-col sm:flex-row justify-around items-center gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-2">
+                            <span class="text-2xl font-bold text-gray-700">A</span>
+                        </div>
+                        <h4 class="font-bold">Auto</h4>
+                        <p class="text-sm text-gray-600 max-w-xs">Automatically advances filament during printing.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-2">
+                            <span class="text-2xl font-bold text-gray-700">L</span>
+                        </div>
+                        <h4 class="font-bold">Load</h4>
+                        <p class="text-sm text-gray-600 max-w-xs">Manually loads filament into the Drywise.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-2">
+                            <span class="text-2xl font-bold text-gray-700">U</span>
+                        </div>
+                        <h4 class="font-bold">Unload</h4>
+                        <p class="text-sm text-gray-600 max-w-xs">Automatically unloads filament from the system.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Operating Procedure -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 border-b pb-2 text-gray-900">Operating Procedure</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Manual Operation -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="font-bold text-lg mb-3 text-gray-800">Option A: Manual Operation</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-sm">
+                        <li>Start a predrying cycle on the Drywise.</li>
+                        <li>Once complete, choose to perform an 'additional drying cycle' or 'load the printer'.</li>
+                        <li>If needed, use the **Load (L)** button to feed more material for the additional cycle.</li>
+                        <li>Select 'load the printer' on the Drywise, skipping its manual instructions.</li>
+                        <li>Use the **Load (L)** button to feed filament to your printer's extruder.</li>
+                        <li>Press and hold the **Auto (A)** button to switch to Auto mode.</li>
+                        <li>Load the printer normally and extrude until the filament is clean and dry.</li>
+                    </ol>
+                </div>
+                <!-- Script-Based Operation -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 class="font-bold text-lg mb-3 text-gray-800">Option B: Script-Based Operation</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-sm">
+                        <li>Use the **Load (L)** button to manually load filament.</li>
+                        <li>Switch to Auto mode by pressing and holding the **Auto (A)** button.</li>
+                        <li>Load the printer normally, extruding until the filament is clean and dry.</li>
+                        <li>On the Drywise, skip to the printing stage.</li>
+                        <li>Start the print from your printer, ensuring the G-code file was sliced with the appropriate script.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Troubleshooting -->
+        <section>
+            <h2 class="text-2xl font-bold mb-6 border-b pb-2 text-gray-900">Troubleshooting</h2>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <p>No troubleshooting steps were provided in the source document.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 py-4 border-t">
+            <p class="text-sm text-gray-500">AutoLoader v2 Quick Start Guide</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
